@@ -1,0 +1,22 @@
+### Análisis de la ejecución y comparación con `quadratic2.c`
+
+#### 1. **Ejecución con la constante `TIMES`**:
+El comportamiento del código `quadratic3.c` es similar al de `quadratic2.c`, pero con algunas diferencias clave en el tipo de funciones matemáticas utilizadas. Al igual que en `quadratic2.c`, se puede variar la constante `TIMES` para ver cómo afecta el tiempo de ejecución de los cálculos. Al incrementar `TIMES`, el tiempo de ejecución aumenta porque se repiten más veces los cálculos para cada uno de los valores en los vectores. Sin embargo, la diferencia notable es que el código utiliza funciones específicas para `float` y `double`:
+
+- **Funciones `powf` y `sqrtf`**: En lugar de usar `pow` y `sqrt`, que son funciones generales para `double`, el código usa `powf` y `sqrtf`, que están optimizadas para el tipo `float`. Esto puede resultar en una ligera mejora de rendimiento para los cálculos con `float`, ya que estas funciones están diseñadas para operar con menor precisión (y menor costo computacional) que las funciones para `double`.
+
+- **Observación en tiempos**: Al variar la constante `TIMES` y ejecutar el código, notarás que el tiempo de ejecución de las soluciones con `float` es generalmente más rápido que con `double`, tal como en `quadratic2.c`. Pero con la diferencia de que en `quadratic3.c`, el uso de las funciones específicas para `float` (`powf` y `sqrtf`) puede hacer que el cálculo con `float` sea aún más eficiente, particularmente cuando el valor de `TIMES` es alto.
+
+#### 2. **Diferencias con `quadratic2.c`**:
+- **Optimización con funciones específicas para `float`**: En `quadratic3.c`, se usan las versiones optimizadas de las funciones matemáticas para `float` (`powf` y `sqrtf`), mientras que en `quadratic2.c` se usan las funciones genéricas para `double` (`pow` y `sqrt`). Esto puede resultar en una mejora en el rendimiento de los cálculos con `float` en `quadratic3.c`.
+
+- **Tipo de datos de las constantes**: En `quadratic3.c`, las constantes `FA`, `FB`, y `FC` están definidas como `float` (con el sufijo `f`), mientras que en `quadratic2.c`, estas constantes son `double` por defecto. Esta diferencia también puede impactar el rendimiento y la precisión de los cálculos.
+
+#### 3. **Impacto en la ejecución**:
+- Al ejecutar el código con diferentes valores de `TIMES`, notarás que el tiempo de ejecución con `float` sigue siendo más rápido que con `double`, pero en `quadratic3.c` el uso de las funciones especializadas (`powf` y `sqrtf`) puede hacer que el rendimiento de `float` sea aún más eficiente en comparación con `quadratic2.c`.
+- Con `double`, el tiempo de ejecución sigue siendo más alto debido a la mayor precisión requerida y la mayor cantidad de operaciones involucradas.
+
+#### Resumen de las diferencias clave:
+1. **Optimización de funciones**: `quadratic3.c` utiliza `powf` y `sqrtf` para operaciones con `float`, lo que mejora el rendimiento en comparación con las funciones generales `pow` y `sqrt` de `quadratic2.c`.
+2. **Precisión**: `quadratic3.c` sigue utilizando `float` para las constantes y cálculos de tipo `float`, mientras que `quadratic2.c` utiliza `double` por defecto.
+3. **Rendimiento**: Con el aumento de `TIMES`, `quadratic3.c` puede mostrar un rendimiento ligeramente mejor con `float` debido a las funciones optimizadas.
