@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define TIMES 20
+#define TIMES 100
 #define N 10000000
 
 #define A 1.0
@@ -94,4 +94,3 @@ double dwalltime()
 	sec = tv.tv_sec + tv.tv_usec/1000000.0;
 	return sec;
 }
-

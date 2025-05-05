@@ -1,0 +1,24 @@
+ ./tabj1 8 2
+Bloque: [2]
+Multiplicacion de matrices de 8x8. Tiempo en segundos 0.000005
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 128 2
+Bloque: [2]
+Multiplicacion de matrices de 128x128. Tiempo en segundos 0.010549
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 256 2
+Bloque: [2]
+Multiplicacion de matrices de 256x256. Tiempo en segundos 0.040558
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 512 2
+Bloque: [2]
+Multiplicacion de matrices de 512x512. Tiempo en segundos 0.293794
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 512 8
+Bloque: [8]
+Multiplicacion de matrices de 512x512. Tiempo en segundos 0.149947
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 512 16
+Bloque: [16]
+Multiplicacion de matrices de 512x512. Tiempo en segundos 0.134312
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 512 32
+Bloque: [32]
+Multiplicacion de matrices de 512x512. Tiempo en segundos 0.151839
+juan@qupa:~/Facu/Sistemas Paralelos/P1/elias work$ ./tabj1 512 1
+Bloque: [1]
+Multiplicacion de matrices de 512x512. Tiempo en segundos 0.841964
